@@ -1,0 +1,31 @@
+Cust Info
+Flight schedule
+per Flight revenue
+
+3 - Tables
+-Cust_Table
+-Booking
+-Flight
+
+--> Cust_table
+*C_id
+*C_name
+*phone
+*email
+*Address
+
+
+--> Booking
+*T_id
+*C_id
+*F_id
+
+-->Flight
+*F_id
+*SP
+*EP
+*Charge
+*Departure
+*Seats
+
+

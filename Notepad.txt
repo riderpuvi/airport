@@ -1,0 +1,29 @@
+Create Table Student( S_ID int, S_Name varchar(255),Course varchar(255),Address varchar(255),DOB date);
+
+constraint check(age>=18)
+
+
+SELECT TABLE_NAME, CONSTRAINT_TYPE, CONSTRAINT_NAME FROM information_schema.table_constraints WHERE table_name='Student';
+
+*Create Constraint during Creation of Objects*
+
+
+create table student1(S_id int primary key,age int check (age>=18),phone int unique not null,city varchar(255) Default 'Bangalore');
+
+
+7/9/22:- 
+
+
+select employee.emp_id as Employee_ID, employee.emp_name as Name, department.dept_name as DepartmentName, department.dept_id as Department_id from employee inner join department on employee.dept_id = department.dept_id;
+
+
+select employee.emp_id as Employee_ID, employee.emp_name as Name, department.dept_name as DepartmentName, department.dept_id as Department_id from employee, department where employee.dept_id = department.dept_id;
+
+
+
+create view view_name as select employee.emp_id as EMP_ID,employee.emp_name as Name;
+
+select * from view_name;
+
+select a.case_id, b.C_name, c.T_id, c.T_name, a.problem, a.case_raise from problem a,customer b, technician c where a.C_id = b.C_id and c.T_id=a.T_id and problem='My TV gone';
+
